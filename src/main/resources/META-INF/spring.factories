@@ -1,0 +1,4 @@
+org.springframework.boot.SpringApplicationRunListener=com.me10zyl.springtest2.springboot.runlisteners.SpringApplicationRunListenerTest
+org.springframework.boot.diagnostics.FailureAnalyzer=com.me10zyl.springtest2.springboot.failureAnalyer.MyFailureAnalyer
+org.springframework.boot.env.EnvironmentPostProcessor=com.me10zyl.springtest2.springboot.environment.EnvironmentPostProcessorTest
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=com.me10zyl.springtest2.springboot.autoconfigure.MyAutoConfiguration
