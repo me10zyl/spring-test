@@ -11,6 +11,7 @@
     <groupId>com.me10zyl</groupId>
     <artifactId>spring-test2</artifactId>
     <version>0.0.1-SNAPSHOT</version>
+    <packaging>pom</packaging>
     <name>spring-test2</name>
     <description>spring-test2</description>
     <url/>
@@ -20,6 +21,10 @@
     <developers>
         <developer/>
     </developers>
+    <modules>
+        <module>kafka</module>
+        <module>spring-extensions</module>
+    </modules>
     <scm>
         <connection/>
         <developerConnection/>
@@ -29,28 +34,16 @@
     <properties>
         <java.version>17</java.version>
     </properties>
-    <dependencies>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
-        </dependency>
 
-        <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-            <optional>true</optional>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-test</artifactId>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>com.alibaba</groupId>
-            <artifactId>fastjson</artifactId>
-            <version>2.0.57</version>
-        </dependency>
-    </dependencies>
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>fastjson</artifactId>
+                <version>2.0.57</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
 
     <build>
         <plugins>
