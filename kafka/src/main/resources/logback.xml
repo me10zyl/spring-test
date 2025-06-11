@@ -1,4 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration>
-    <logger name="org.apache.kafka" level="INFO"/>
+    <property name="CONSOLE_PATTERN"
+              value="${CONSOLE_PATTERN:-%date{yyyy-MM-dd HH:mm:ss.SSS} | %green(%X{requestURI}) | %red(%X{globalTraceId}) | %-5level | [%thread] | %logger{36}:%line | %msg%n}"/>
+    <logger name="org.apache.kafka" level="INFO" />
+    <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>${CONSOLE_PATTERN}</pattern>
+        </encoder>
+    </appender>
+    <root level="INFO">
+        <appender-ref ref="CONSOLE"/>
+    </root>
 </configuration>
