@@ -24,6 +24,7 @@
     <modules>
         <module>kafka</module>
         <module>spring-extensions</module>
+        <module>spring-kafka</module>
     </modules>
     <scm>
         <connection/>
