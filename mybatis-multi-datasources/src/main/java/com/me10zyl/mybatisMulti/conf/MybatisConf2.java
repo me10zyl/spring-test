@@ -12,7 +12,7 @@ import org.springframework.context.annotation.Configuration;
 import javax.sql.DataSource;
 
 @Configuration
-//@MapperScan(basePackages = "com.me10zyl.mybatisMulti.dao.order", sqlSessionFactoryRef = "orderSqlSessionFactory")
+@MapperScan(basePackages = "com.me10zyl.mybatisMulti.dao.order", sqlSessionFactoryRef = "orderSqlSessionFactory")
 public class MybatisConf2 {
 
     @Bean(name = "orderDataSource")
@@ -21,10 +21,11 @@ public class MybatisConf2 {
         return DataSourceBuilder.create().build();
     }
 
+
     @Bean(name = "orderSqlSessionFactory")
-    public SqlSessionFactory orderSqlSessionFactory(@Qualifier("orderDataSource") DataSource dataSource) throws Exception {
+    public SqlSessionFactoryBean orderSqlSessionFactory(@Qualifier("orderDataSource") DataSource dataSource) throws Exception {
         SqlSessionFactoryBean factoryBean = new SqlSessionFactoryBean();
         factoryBean.setDataSource(dataSource);
-        return factoryBean.getObject();
+        return factoryBean;
     }
 }
