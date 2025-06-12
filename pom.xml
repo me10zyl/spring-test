@@ -25,6 +25,7 @@
         <module>kafka</module>
         <module>spring-extensions</module>
         <module>spring-kafka</module>
+        <module>mybatis-multi-datasources</module>
     </modules>
     <scm>
         <connection/>
@@ -42,6 +43,11 @@
                 <groupId>com.alibaba</groupId>
                 <artifactId>fastjson</artifactId>
                 <version>2.0.57</version>
+            </dependency>
+            <dependency>
+                <groupId>mysql</groupId>
+                <artifactId>mysql-connector-java</artifactId>
+                <version>8.0.33</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
