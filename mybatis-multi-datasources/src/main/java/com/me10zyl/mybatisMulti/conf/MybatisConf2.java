@@ -12,7 +12,7 @@ import org.springframework.context.annotation.Configuration;
 import javax.sql.DataSource;
 
 @Configuration
-@MapperScan(basePackages = "com.me10zyl.mybatisMulti.dao.order", sqlSessionFactoryRef = "orderSqlSessionFactory")
+//@MapperScan(basePackages = "com.me10zyl.mybatisMulti.dao.order", sqlSessionFactoryRef = "orderSqlSessionFactory")
 public class MybatisConf2 {
 
     @Bean(name = "orderDataSource")

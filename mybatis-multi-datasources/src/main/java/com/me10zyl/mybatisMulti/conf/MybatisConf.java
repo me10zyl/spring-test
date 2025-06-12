@@ -13,7 +13,7 @@ import org.springframework.context.annotation.Primary;
 import javax.sql.DataSource;
 
 @Configuration
-@MapperScan(basePackages = "com.me10zyl.mybatisMulti.dao.account", sqlSessionFactoryRef = "accountDataSource")
+//@MapperScan(basePackages = "com.me10zyl.mybatisMulti.dao.account", sqlSessionFactoryRef = "accountDataSource")
 public class MybatisConf {
     @Bean(name = "accountDataSource")
     @Primary
