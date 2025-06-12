@@ -5,6 +5,6 @@ import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 @Mapper
 public interface OrderMapper {
-    @Insert("INSERT INTO order (uid) VALUES (#{uid})")
+    @Insert("INSERT INTO `order`(uid) VALUES (#{uid})")
     void insert(@Param("uid") Integer uid);
 }

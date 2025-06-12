@@ -6,7 +6,7 @@ spring:
       password: ${cook_mysql_password}
       driver-class-name: com.mysql.cj.jdbc.Driver
     order:
-      jdbc-url: jdbc:mysql:/${cook_mysql_hostname}/order
+      jdbc-url: jdbc:mysql://${cook_mysql_hostname}/order
       username: ${cook_mysql_username}
       password: ${cook_mysql_password}
       driver-class-name: com.mysql.cj.jdbc.Driver

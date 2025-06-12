@@ -9,16 +9,26 @@ import org.springframework.boot.jdbc.DataSourceBuilder;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
+import org.springframework.jdbc.support.JdbcTransactionManager;
+import org.springframework.transaction.*;
+import org.springframework.transaction.annotation.Transactional;
 
 import javax.sql.DataSource;
 
 @Configuration
+@MapperScan(basePackages = "com.me10zyl.mybatisMulti.dao.account", sqlSessionFactoryRef = "accountSqlSessionFactory")
 public class MybatisConf {
     @Bean(name = "accountDataSource")
     @Primary
     @ConfigurationProperties(prefix = "spring.datasource.account")
     public DataSource accountDataSource() {
         return DataSourceBuilder.create().build();
+    }
+
+    @Bean
+    @Primary
+    public PlatformTransactionManager transactionManager(@Qualifier("accountDataSource") DataSource dataSource){
+        return new JdbcTransactionManager(dataSource);
     }
 
     @Bean(name = "accountSqlSessionFactory")
