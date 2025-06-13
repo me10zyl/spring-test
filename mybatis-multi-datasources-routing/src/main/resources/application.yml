@@ -1,0 +1,15 @@
+spring:
+  datasource:
+    account:
+      jdbc-url: jdbc:mysql://${cook_mysql_hostname}/account
+      username: ${cook_mysql_username}
+      password: ${cook_mysql_password}
+      driver-class-name: com.mysql.cj.jdbc.Driver
+    order:
+      jdbc-url: jdbc:mysql://${cook_mysql_hostname}/order
+      username: ${cook_mysql_username}
+      password: ${cook_mysql_password}
+      driver-class-name: com.mysql.cj.jdbc.Driver
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true

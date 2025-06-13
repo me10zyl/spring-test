@@ -26,6 +26,7 @@
         <module>spring-extensions</module>
         <module>spring-kafka</module>
         <module>mybatis-multi-datasources</module>
+        <module>mybatis-multi-datasources-routing</module>
     </modules>
     <scm>
         <connection/>
